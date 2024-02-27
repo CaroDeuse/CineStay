@@ -6,5 +6,7 @@
     <p><%= villa.description %></p>
     <p><%= villa.price_per_night %></p>
     <p><%= villa.guests_number %></p>
+    <%# the line below displays the picture saved in cloudinary %>
+    <%= cl_image_tag villa.photo.key %>
   <% end %>
 </div>
