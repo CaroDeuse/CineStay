@@ -1,0 +1,14 @@
+<div class="villa-infos d-flex border m-5 p-5" style="height: 500px; justify-content: space-between; flex-direction: column">
+  <div class="title">
+    <h2><%= @villa.name %></h2>
+    <p><%= @villa.address %></p>
+  </div>
+  <div class="villa-description d-flex border p-2" style="height: 150px; flex-direction: column; justify-content: end;">
+    <p style="height: 120px"><%= @villa.description %></p>
+    <p class="m-0"><%= @villa.price_per_night %> €</p>
+  </div>
+  <div class="guests">
+    <p><%= @villa.guests_number %> pers.</p>
+  </div>
+  <%= link_to "Back" ,root_path %>
+</div>

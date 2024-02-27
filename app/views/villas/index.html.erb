@@ -1,12 +1,12 @@
-<div>
+<div class="card">
   <% @villas.each do |villa| %>
     <h2><%= villa.name %></h2>
+    <%= cl_image_tag villa.photo.key, height: 300 %>
+    <br>
     <p><%= villa.address %></p>
     <p><%= villa.movie_genre %></p>
-    <p><%= villa.description %></p>
     <p><%= villa.price_per_night %></p>
     <p><%= villa.guests_number %></p>
-    <%# the line below displays the picture saved in cloudinary %>
-    <%= cl_image_tag villa.photo.key %>
+    <%= link_to  "About this villa", villa_path(villa) %>
   <% end %>
 </div>
