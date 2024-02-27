@@ -14,12 +14,12 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item active">
-            <%= link_to "In progress", "#", class: "nav-link" %>
+            <%= link_to "Add a new villa", new_villa_path, class: "nav-link" %>
           </li>
           <%# we should adapt/remove this link %>
 
           <li class="nav-item">
-            <%= link_to "In progress", "#", class: "nav-link" %>
+            <%= link_to "My villas", "#", class: "nav-link" %>
           </li>
           <%# we should adapt/remove this link %>
 
