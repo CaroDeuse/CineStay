@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema[7.1].define(version: 2024_02_27_133222) do
-=======
 ActiveRecord::Schema[7.1].define(version: 2024_02_27_113858) do
->>>>>>> master
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -60,10 +56,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_27_113858) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-<<<<<<< HEAD
-  add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-=======
   create_table "villas", force: :cascade do |t|
     t.string "name"
     t.string "address"
@@ -77,6 +69,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_27_113858) do
     t.index ["user_id"], name: "index_villas_on_user_id"
   end
 
+  add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "villas", "users"
->>>>>>> master
 end
