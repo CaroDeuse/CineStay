@@ -1,15 +1,24 @@
-// Define variables for your color scheme
+$white:  rgb(255, 255, 255);
 
-// For example:
+$grey0:  rgb(240, 240, 240);
+$grey1:  rgb(204, 204, 204);
+$grey2:  rgb(153, 153, 153);
+$grey3:  rgb(95, 95, 95);
+$grey4:  rgb(102, 102, 102);
+$grey5: rgb(51, 51, 51);
+
+$black: rgb(0, 0, 0);
+
+$cineblue: rgb(17, 69, 112);
+$cinelightblue: rgb(233, 243, 251);
+$cinepink: rgb(233, 69, 112);
+
+
+
+// bootstrap colors - do not remove
 $red: #FD1015;
 $blue: #0D6EFD;
 $yellow: #FFC65A;
 $orange: #E67E22;
 $green: #1EDD88;
 $gray: #0E0000;
-$light-gray: #F4F4F4;
-
-$white:  rgb(255, 255, 255); // used in navbar
-$light-grey:  rgb(235, 235, 235); // used in button
-$dark-grey:  rgb(95, 95, 95); // used in button
-$light-black: rgb(45, 45, 45);
