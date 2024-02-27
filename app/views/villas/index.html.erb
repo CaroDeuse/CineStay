@@ -1,0 +1,10 @@
+<div>
+  <% @villas.each do |villa| %>
+    <h2><%= villa.name %></h2>
+    <p><%= villa.address %></p>
+    <p><%= villa.movie_genre %></p>
+    <p><%= villa.description %></p>
+    <p><%= villa.price_per_night %></p>
+    <p><%= villa.guests_number %></p>
+  <% end %>
+</div>
