@@ -3,6 +3,14 @@
   background: white;
 }
 
+.navbar-lewagon .dropdown {
+  margin-top: 8px;
+  margin-left: 8px;
+}
+// I had to add this to align the menu in the navbar
+
+
+
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
