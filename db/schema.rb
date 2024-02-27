@@ -32,7 +32,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_27_113858) do
     t.string "name"
     t.string "address"
     t.string "movie_genre"
-    t.string "description"
+    t.text "description"
     t.integer "price_per_night"
     t.integer "guests_number"
     t.bigint "user_id", null: false
