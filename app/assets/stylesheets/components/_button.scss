@@ -3,18 +3,18 @@
   text-decoration: none;
   font-weight: 700;
   border-radius: 100px;
-  border: solid 1px $dark-grey;
+  border: solid 1px $cineblue;
 }
 
 .my-btn.prim {
-  background-color: $dark-grey;
-  color: white;
+  background-color: $cineblue;
+  color: $white;
   font-weight: 700;
 }
 
 .my-btn.sec {
-  background-color: $light-grey;
-  color: rgb(95, 95, 95);
+  // background-color: $grey0;
+  color: $cineblue;
   font-weight: 700;
   margin-bottom: 20px; // this margin is needed for the sign in forms, to make space before the links
 }

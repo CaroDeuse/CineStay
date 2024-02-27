@@ -7,4 +7,5 @@ class Villa < ApplicationRecord
   validates :description, presence: true, length: { minimum: 25 }
   validates :price_per_night, numericality: { only_integer: true }
   validates :guests_number, numericality: { only_integer: true }
+  has_one_attached :photo
 end
