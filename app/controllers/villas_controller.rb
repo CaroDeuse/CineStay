@@ -34,9 +34,7 @@ class VillasController < ApplicationController
     @villa = Villa.find(params[:id])
     @villa.update(villa_params)
     if @villa.save
-      redirect_to root_path
-      # redirect_to villa_path(@villa)
-      # we should change the redirect but since the page doesn't exist yet I redirect to home
+      redirect_to villa_path(@villa)
     else
       render :edit, status: :unprocessable_entity
     end
@@ -45,8 +43,7 @@ class VillasController < ApplicationController
   def destroy
     @villa = Villa.find(params[:id])
     @villa.destroy
-    redirect_to root_path, status: :see_other
-    # we should change the redirect to one owners' villa but since the page doesn't exist yet I redirect to home
+    redirect_to my_villas_villas_path, status: :see_other
   end
 
   def my_villas
