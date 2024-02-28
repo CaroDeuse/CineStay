@@ -1,12 +1,19 @@
-<div class="card">
+<h1><U> Explore The Movie Theme Villas : </U></h1>
+
+<div class="row">
   <% @villas.each do |villa| %>
-    <h2><%= villa.name %></h2>
-    <%= cl_image_tag villa.photo.key, height: 300 %>
-    <br>
-    <p><%= villa.address %></p>
-    <p><%= villa.movie_genre %></p>
-    <p><%= villa.price_per_night %></p>
-    <p><%= villa.guests_number %></p>
-    <%= link_to  "About this villa", villa_path(villa) %>
+    <div class="col-4 col-lg-4">
+      <div class="card">
+        <h2><%= villa.name %></h2>
+        <% if villa.photo.attached? %>
+          <%= cl_image_tag villa.photo.key, height: 300 %>
+        <% end %>    <br>
+        <p><%= villa.address %></p>
+        <p><%= villa.movie_genre %></p>
+        <p><%= villa.price_per_night %></p>
+        <p><%= villa.guests_number %></p>
+        <%= link_to  "About this villa", villa_path(villa) %>
+      </div>
+    </div>
   <% end %>
 </div>
