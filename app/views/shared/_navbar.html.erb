@@ -2,9 +2,13 @@
 
   <div class="container-fluid">
     <%= link_to root_path, class: "navbar-brand" do %>
-      <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
-      <%# we should replace this with our logo!! %>
+      <%= image_tag "CineStayLogo" %>
     <% end %>
+
+    <%= link_to root_path, class: "cinestay-link" do %>
+      <p class="cinestay"><strong>C</strong>INE<strong>S</strong>TAY</p>
+    <% end %>
+
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -16,7 +20,6 @@
           <li class="nav-item active">
             <%= link_to "Add a new villa", new_villa_path, class: "nav-link" %>
           </li>
-          <%# we should adapt/remove this link %>
 
           <li class="nav-item">
             <%= link_to "My villas", "#", class: "nav-link" %>
@@ -24,7 +27,7 @@
           <%# we should adapt/remove this link %>
 
           <li class="nav-item dropdown">
-          <a href="#" class="my-btn sec" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a href="#" class="my-btn prim" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Menu<i class="fa-solid fa-bars"></i>
           </a>
           <%# we could replace this with an avatar of the user connected (if we ask for one at login!) %>

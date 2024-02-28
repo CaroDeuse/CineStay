@@ -3,20 +3,24 @@
   text-decoration: none;
   font-weight: 700;
   border-radius: 100px;
-  border: solid 1px $cineblue;
+  border: solid 1px $cinepink;
 }
 
+
 .my-btn.prim {
-  background-color: $cineblue;
+  background: linear-gradient(to left top, $cinedarkpink, 15%, $cinepink);
   color: $white;
   font-weight: 700;
+  margin-bottom: 20px; // this margin is needed for the sign in forms, to make space before the links
+}
+
+.my-btn.prim:hover {
+  background: linear-gradient(to left top, $cinepink, $cinepink);
 }
 
 .my-btn.sec {
-  // background-color: $grey0;
-  color: $cineblue;
+  color: $cinepink;
   font-weight: 700;
-  margin-bottom: 20px; // this margin is needed for the sign in forms, to make space before the links
 }
 
 .my-btn i {
