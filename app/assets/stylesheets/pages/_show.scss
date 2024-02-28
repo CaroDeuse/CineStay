@@ -6,3 +6,15 @@
 .booking {
   width: auto;
 }
+
+.villa-infos {
+  height: 500px;
+  justify-content: space-between;
+  flex-direction: column
+}
+
+.villa-description {
+  height: 150px;
+  flex-direction: column;
+  justify-content: end;
+}
