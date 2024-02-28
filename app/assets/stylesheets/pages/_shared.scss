@@ -17,4 +17,5 @@ body {
   background: linear-gradient(217deg, $cinedarkblue1, $transparent 100%),
               linear-gradient(127deg, $cinedarkblue2, $transparent 75%),
               linear-gradient(336deg, $cinepink, $cinedarkblue1 75%);
+  background-attachment: fixed;
 }
