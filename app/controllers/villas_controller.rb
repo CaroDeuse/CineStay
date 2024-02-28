@@ -41,6 +41,17 @@ class VillasController < ApplicationController
     end
   end
 
+  def destroy
+    @villa = Villa.find(params[:id])
+    @villa.destroy
+    redirect_to root_path, status: :see_other
+    # we should change the redirect to one owners' villa but since the page doesn't exist yet I redirect to home
+  end
+
+  def my_villas
+    @villas = Villa.where(user: current_user)
+  end
+
   private
 
   def villa_params

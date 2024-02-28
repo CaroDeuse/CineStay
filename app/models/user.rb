@@ -2,6 +2,7 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   has_many :villas
+  has_many :bookings
   validates :firstname, presence: true
   validates :lastname, presence: true
 
