@@ -5,9 +5,6 @@
   <%= f.input :description %>
   <%= f.input :price_per_night %>
   <%= f.input :guests_number %>
-  <%# the user needs to be able to add picture -> cloudinary & active storage%>
+  <%= f.input :photo, as: :file %>
   <%= f.submit class:"my-btn prim" %>
 <% end %>
-
-
-<%# add a button on the home page %>

@@ -1,12 +1,18 @@
 <div class="card">
   <% @villas.each do |villa| %>
     <h2><%= villa.name %></h2>
-    <%= cl_image_tag villa.photo.key, height: 300 %>
+    <%# <%= cl_image_tag villa.photo.key, height: 300 %>
+    <%# Caro: YOU WILL GET A CONFLICT because i commented the line above as it was causing trouble in my code
+    you should take your version!! %>
     <br>
     <p><%= villa.address %></p>
     <p><%= villa.movie_genre %></p>
     <p><%= villa.price_per_night %></p>
     <p><%= villa.guests_number %></p>
     <%= link_to  "About this villa", villa_path(villa) %>
+
+    <%= link_to  "Edit", edit_villa_path(villa) %>
+    <%= link_to  "Delete", villa_path(villa), data: {turbo_method: :delete, turbo_confirm: "Are you sure? Any existing bookings will be deleted as well!"} %>
+    <%# Caro: I have added this two lines for testing purposes. They should not remain here! If you get a conflict you can delete. %>
   <% end %>
 </div>
