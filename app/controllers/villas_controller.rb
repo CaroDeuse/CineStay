@@ -56,6 +56,6 @@ class VillasController < ApplicationController
   private
 
   def villa_params
-    params.require(:villa).permit(:name, :address, :movie_genre, :description, :price_per_night, :guests_number)
+    params.require(:villa).permit(:name, :address, :movie_genre, :description, :price_per_night, :guests_number, :photo)
   end
 end
