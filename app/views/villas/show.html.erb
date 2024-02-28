@@ -19,7 +19,16 @@
 
     <%# TO DO: For Geoffroy, booking's form %>
 
-    <div class="booking"><p>TODO: BOOKINGS</p></div>
+    <div class="booking"><p>
+    <h1>Book this villa</h1>
+  <%= simple_form_for [@villa, @booking] do |f| %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+  <%= f.submit "Book", class: "btn btn-primary" %>
+  <% end %>
+
+
+    </p></div>
 
   </div>
 </div>
