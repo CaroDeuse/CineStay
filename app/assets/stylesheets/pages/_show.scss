@@ -1,20 +1,55 @@
-.show-page {
-  display: flex;
-  justify-content: space-evenly;
+.map-banner {
+  height: 300px;
 }
 
-.booking {
-  width: auto;
+.map-banner img {
+  height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+}
+
+.villa-box {
+  margin-bottom: 75px;
+}
+
+.address {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.villa-pics {
+  height: 475px;
+  background-color: $cinetransparentpink;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.villa-pics img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 .villa-infos {
-  height: 500px;
-  justify-content: space-between;
-  flex-direction: column
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
-.villa-description {
-  height: 150px;
-  flex-direction: column;
-  justify-content: end;
+.villa-infos i {
+  margin-right: 5px;
+}
+
+.villa-infos p {
+  margin-right: 20px;
+  margin-bottom: 0;
+}
+
+.booking {
+  position: sticky;
+  top: 115px;
+  margin-top: 45px;
 }
