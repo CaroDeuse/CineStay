@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: $cinelightblue;
+  background: $cinedarkblue2;
 }
 
 .navbar-lewagon .dropdown {
@@ -9,6 +9,39 @@
 }
 // I had to add this to align the menu in the navbar
 
+.cinestay-link {
+  flex-grow: 1;
+  text-decoration: none;
+}
+
+.cinestay {
+  font-family: "Orbitron", sans-serif;
+  color: $cinepink;
+  margin: 0px;
+  font-size: 24px;
+}
+
+.nav-link:hover {
+  color: $grey1;
+  font-weight: 700;
+}
+
+.dropdown-item {
+  color: $white;
+}
+
+.dropdown-item:hover {
+  color: $white;
+  font-weight: 700;
+  background-color: $transparent;
+
+}
+
+.dropdown-menu {
+  // border: solid 1px $white;
+  background-color: $cinepink;
+  border-radius: 20px;
+}
 
 
 .navbar-lewagon .navbar-collapse {
