@@ -1,4 +1,7 @@
 class Villa < ApplicationRecord
+  geocoded_by :address
+  after_validation :geocode, if: :will_save_change_to_address?
+
   MOVIE_GENRE = ["Action", "Adventure", "Animation", "Fantasy", "Horror", "Sci-Fi", "Thriller", "Western"]
   belongs_to :user
   has_many :bookings, dependent: :destroy

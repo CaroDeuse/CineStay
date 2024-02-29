@@ -3,11 +3,25 @@ class VillasController < ApplicationController
 
   def index
     @villas = Villa.all
+
+    @markers = @villas.geocoded.map do |villa|
+      {
+        lat: villa.latitude,
+        lng: villa.longitude
+      }
+    end
   end
 
   def show
     @villa = Villa.find(params[:id])
     @booking = Booking.new
+
+    @markers = [
+      {
+        lat: @villa.latitude,
+        lng: @villa.longitude
+      }
+    ]
   end
 
   def new
