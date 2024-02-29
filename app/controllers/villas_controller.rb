@@ -18,9 +18,7 @@ class VillasController < ApplicationController
     @villa = Villa.new(villa_params)
     @villa.user = current_user
     if @villa.save
-      redirect_to root_path
-      # redirect_to villa_path(@villa)
-      # we should change the redirect but since the page doesn't exist yet I redirect to home
+      redirect_to my_villas_villas_path, notice: "Congratulations, visitors can now rent your villa!"
     else
       render :new, status: :unprocessable_entity
     end
@@ -43,7 +41,7 @@ class VillasController < ApplicationController
   def destroy
     @villa = Villa.find(params[:id])
     @villa.destroy
-    redirect_to my_villas_villas_path, status: :see_other
+    redirect_to my_villas_villas_path, status: :see_other, notice: "Your villa was deleted and all related bookings were cancelled."
   end
 
   def my_villas
