@@ -1,0 +1,21 @@
+import { Controller } from "@hotwired/stimulus"
+
+// Connects to data-controller="booking-cost"
+export default class extends Controller {
+  static targets = ["nightsNumber", "totalPrice"]
+
+  connect() {
+    console.log("Hey I'm trying to do some JS")
+  }
+
+  updateFields(event) {
+    console.log("I'm binding an event");
+    console.log(event);
+    this.nightsNumberTarget.innerText = "Bingo!";
+    this.totalPriceTarget.innerText = "re-Bingo!";
+    // how do i update this text? do i need values?
+
+
+  }
+
+}

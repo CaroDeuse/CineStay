@@ -32,11 +32,23 @@
 
 
     <div class="col-4">
-      <div class="my-form booking">
+      <div class="my-form booking" data-controller="booking-cost" >
         <h3>Book this villa</h1>
         <%= simple_form_for [@villa, @booking] do |f| %>
           <%= f.input :start_date %>
           <%= f.input :end_date %>
+
+          <div data-action="click->booking-cost#updateFields">where the hell do i put that?on the fields?</div>
+
+          <p>Price per night:</p>
+          <p><%= @villa.price_per_night %></p>
+
+          <p>Number of nights:</p>
+          <p data-booking-cost-target="nightsNumber" ></p>
+
+          <p>Total price:</p>
+          <p data-booking-cost-target="totalPrice" ></p>
+
           <%= f.submit "Book", class: "my-btn prim" %>
         <% end %>
         <%# add total price %>
