@@ -1,0 +1,73 @@
+.booking-card {
+  background-color: $cinedarkblue2;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  height: 145px;
+  display: flex;
+}
+
+.booking-card .booking-pic {
+  width: 145px;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.booking-info {
+  padding: 15px 20px;
+  width: 100%;
+  position: relative;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.delete-btn {
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+}
+
+
+.booking-address {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  margin-top: 8px;
+
+  i {
+    margin-right: 5px;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.new-booking {
+  height: 145px;
+  background-color: $cinetransparentlight;
+  border: 1px solid $grey1;
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  margin-bottom: 30px;
+
+  p {
+    margin: 0px;
+  }
+
+  .my-btn {
+    margin-left: 20px;
+    margin-bottom: 0px;
+  }
+}
+
+.new-booking:hover {
+  background-color: $cinetransparentpink;
+}
