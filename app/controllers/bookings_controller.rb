@@ -5,7 +5,7 @@ class BookingsController < ApplicationController
     @booking.villa = @villa
     @booking.user = current_user
     if @booking.save
-      redirect_to my_bookings_bookings_path
+      redirect_to my_bookings_bookings_path, notice: "Your booking has successfully been saved!"
     else
       render "villas/show", status: :unprocessable_entity
     end
@@ -20,7 +20,7 @@ class BookingsController < ApplicationController
   def destroy
     @booking = Booking.find(params[:id])
     @booking.destroy
-    redirect_to my_bookings_bookings_path, status: :see_other
+    redirect_to my_bookings_bookings_path, status: :see_other, notice: "Your booking has been cancelled."
   end
 
   private
