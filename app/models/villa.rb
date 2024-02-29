@@ -1,5 +1,5 @@
 class Villa < ApplicationRecord
-  MOVIE_GENRE = ["Action", "Comedy", "Drama", "Fantasy", "Horror", "Sci-Fi", "Romance", "Thriller", "Documentary", "Animation"]
+  MOVIE_GENRE = ["Action", "Adventure", "Animation", "Fantasy", "Horror", "Sci-Fi", "Thriller", "Western"]
   belongs_to :user
   has_many :bookings, dependent: :destroy
   validates :name, presence: true, uniqueness: true
