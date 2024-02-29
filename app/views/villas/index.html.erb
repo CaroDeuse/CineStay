@@ -1,7 +1,22 @@
 <div class="full-screen-container">
+  
   <div class="container">
+  <div class="row justify-content-center">
+  <h1 class="top-title">Explore the movie-themed Villas...</h1>
+  <div class="col-sm-8 my-3">
+    <%= form_with url: root_path, method: :get, class: "d-flex" do %>
+      <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Type a movie genre or a popular movie"
+        %>
+      <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+  </div>
 
-    <h1 class="top-title">Explore the movie-themed Villas...</h1>
+  
+  <div class="container">
 
     <%# REFACTO
     most of this code is the same than my_villas %>
@@ -23,7 +38,8 @@
               <div class="general-info">
                 <h3><%= villa.name %></h3>
                 <p><%= villa.address %></p>
-                <p><%= villa.movie_genre %></p>
+                <p><%= villa.movie_genre %> | Inspired by <%= villa.inspired_by%></p>
+
 
 
                 <div class="guest-price">
