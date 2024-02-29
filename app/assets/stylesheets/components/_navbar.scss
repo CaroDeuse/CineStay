@@ -52,4 +52,10 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+  box-shadow: 0 0 5px rgba($color: $white, $alpha: 0.5);
+  // TO-DO: the shadow of the image. because it's a png, maybe add a shadow manuelly on powerpoint
+}
+
+.navbar-lewagon p {
+  text-shadow: 0 0 5px rgba($color: $white, $alpha: 0.5);
 }

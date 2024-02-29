@@ -2,6 +2,12 @@
   border-radius: 20px;
   margin-bottom: 30px;
   background-color: $cinedarkblue2;
+  box-shadow: 3px 5px 10px rgba($color: $black, $alpha: 0.7);
+}
+
+.villa-card:hover {
+  border: 1px rgba($color: $white, $alpha: 0.7);
+  box-shadow: 0 0 10px rgba($color: $white, $alpha: 0.5);
 }
 
 .villa-card .villa-pic {
