@@ -17,14 +17,9 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-          <li class="nav-item active">
+          <li class="nav-item">
             <%= link_to "Add a new villa", new_villa_path, class: "nav-link" %>
           </li>
-
-          <li class="nav-item">
-            <%= link_to "My villas", my_villas_villas_path, class: "nav-link" %>
-          </li>
-          <%# we should adapt/remove this link %>
 
           <li class="nav-item dropdown">
           <a href="#" class="my-btn prim" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -33,8 +28,8 @@
           <%# we could replace this with an avatar of the user connected (if we ask for one at login!) %>
 
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Actions in progress", "#", class: "dropdown-item" %>
-              <%# we should adapt/remove this link %>
+              <%= link_to "My bookings", my_bookings_bookings_path, class: "dropdown-item" %>
+              <%= link_to "My villas", my_villas_villas_path, class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>
             </div>
           </li>
