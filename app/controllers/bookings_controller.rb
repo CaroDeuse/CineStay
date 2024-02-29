@@ -5,7 +5,7 @@ class BookingsController < ApplicationController
     @booking.villa = @villa
     @booking.user = current_user
     if @booking.save
-      redirect_to my_bookings_bookings_path, notice: "Your booking has successfully been saved!"
+      redirect_to my_bookings_bookings_path, notice: "Get ready for your trip! Your booking is confirmed."
     else
       render "villas/show", status: :unprocessable_entity
     end
