@@ -1,45 +1,47 @@
-<div class="container">
+<div class="full-screen-container">
+  <div class="container">
 
-  <h1 class="top-title">Explore the movie-themed Villas...</h1>
+    <h1 class="top-title">Explore the movie-themed Villas...</h1>
 
-  <%# REFACTO
-  most of this code is the same than my_villas %>
+    <%# REFACTO
+    most of this code is the same than my_villas %>
 
-  <div class="row">
-    <% @villas.each do |villa| %>
-      <div class="col-4 col-lg-4">
+    <div class="row">
+      <% @villas.each do |villa| %>
+        <div class="col-4 col-lg-4">
 
-        <%# villa card %>
-        <%= link_to villa_path(villa) do %>
-          <div class="villa-card">
-            <%# picture %>
-            <% if villa.photo.attached? %>
-              <%= cl_image_tag villa.photo.key, height: 300, class:"villa-pic" %>
-            <% end %>
-
-
-            <%# general info %>
-            <div class="general-info">
-              <h3><%= villa.name %></h3>
-              <p><%= villa.address %></p>
-              <p><%= villa.movie_genre %></p>
+          <%# villa card %>
+          <%= link_to villa_path(villa) do %>
+            <div class="villa-card">
+              <%# picture %>
+              <% if villa.photo.attached? %>
+                <%= cl_image_tag villa.photo.key, height: 300, class:"villa-pic" %>
+              <% end %>
 
 
-              <div class="guest-price">
-                <i class="fa-solid fa-people-group"></i>
-                <p><%= villa.guests_number %></p>
-                <i class="fa-solid fa-euro-sign"></i>
-                <p><%= villa.price_per_night %></p>
+              <%# general info %>
+              <div class="general-info">
+                <h3><%= villa.name %></h3>
+                <p><%= villa.address %></p>
+                <p><%= villa.movie_genre %></p>
+
+
+                <div class="guest-price">
+                  <i class="fa-solid fa-people-group"></i>
+                  <p><%= villa.guests_number %></p>
+                  <i class="fa-solid fa-euro-sign"></i>
+                  <p><%= villa.price_per_night %></p>
+                </div>
+
               </div>
 
             </div>
-
-          </div>
-        <% end %>
-      </div>
-    <% end %>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
   </div>
-  <div style="width: 100%; height: 600px;"
+  <div class="map-box-all-villas" style="width: 600px;"
     data-controller="map"
     data-map-markers-value="<%= @markers.to_json %>"
     data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
