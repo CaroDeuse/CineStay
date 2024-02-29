@@ -1,6 +1,8 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: $cinedarkblue2;
+  position: sticky;
+  top: 0;
 }
 
 .navbar-lewagon .dropdown {

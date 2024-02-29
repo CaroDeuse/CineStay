@@ -1,0 +1,15 @@
+.form-control {
+  border-radius: 20px;
+}
+
+.form-select {
+  border-radius: 20px;
+}
+
+.my-form {
+  background-color: $cinetransparentdark;
+  border: 1px solid $grey3;
+  padding: 20px;
+  border-radius: 20px;
+}
+// we may want to apply to to all forms and not just booking

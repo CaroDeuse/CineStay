@@ -4,7 +4,7 @@
   background-color: $cinedarkblue2;
 }
 
-.villa-pic {
+.villa-card .villa-pic {
   width: 100%;
   height: 250px;
   object-fit: cover;
@@ -44,4 +44,24 @@
   padding-left: 5px;
   padding-right: 5px;
   color: rgb(50, 50, 50);
+}
+
+.new-villa {
+  height: 500px;
+  background-color: $cinetransparentlight;
+  border: 1px solid $grey1;
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+
+  h4 {
+    font-size: 64px;
+  }
+}
+
+.new-villa:hover {
+  background-color: $cinetransparentpink;
 }

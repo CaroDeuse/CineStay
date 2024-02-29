@@ -1,34 +1,51 @@
-<div class="show-page">
-  <div class="row justify-content-flex-start">
-    <div class="col-12 col-lg-8">
-      <div class="villa-infos d-flex border m-5 p-5">
-        <div class="title">
-          <h2><%= @villa.name %></h2>
+<div class="map-banner">
+  <%= image_tag "map.png" %>
+</div>
+<%# to be replaced with real map %>
+
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-8">
+      <div class="villa-box">
+        <h1 class="top-title"><%= @villa.name %></h1>
+
+        <div class="villa-infos">
+          <i class="fa-solid fa-people-group"></i>
+          <p class="no-margin"><%= @villa.guests_number %></p>
+          <i class="fa-solid fa-euro-sign"></i>
+          <p class="no-margin"><%= @villa.price_per_night %>/night</p>
+          <i class="fa-solid fa-location-dot"></i>
           <p><%= @villa.address %></p>
         </div>
-        <div class="villa-description d-flex border p-2">
-          <p style="height: 120px"><%= @villa.description %></p>
-          <p class="m-0"><%= @villa.price_per_night %> €</p>
+
+        <p><%= @villa.description %></p>
+
+        <div class="villa-pics">
+          <%= cl_image_tag @villa.photo.key %>
         </div>
-        <div class="guests">
-          <p><%= @villa.guests_number %> pers.</p>
-        </div>
-        <%= link_to "Back" ,root_path %>
+        <%# make this a carousel %>
+        <%= link_to "Back to explore", root_path, class:"my-btn sec" %>
       </div>
     </div>
 
-    <%# TO DO: For Geoffroy, booking's form %>
 
-    <div class="booking"><p>
-    <h1>Book this villa</h1>
-  <%= simple_form_for [@villa, @booking] do |f| %>
-  <%= f.input :start_date %>
-  <%= f.input :end_date %>
-  <%= f.submit "Book", class: "btn btn-primary" %>
-  <% end %>
-
-
-    </p></div>
+    <div class="col-4">
+      <div class="my-form booking">
+        <h3>Book this villa</h1>
+        <%= simple_form_for [@villa, @booking] do |f| %>
+          <%= f.input :start_date %>
+          <%= f.input :end_date %>
+          <%= f.submit "Book", class: "my-btn prim" %>
+        <% end %>
+        <%# add total price %>
+      </div>
+    </div>
 
   </div>
+
+
+
+
 </div>
