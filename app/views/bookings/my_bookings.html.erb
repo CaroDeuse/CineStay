@@ -1,0 +1,77 @@
+<div class="container">
+  <h1 class="top-title">My bookings</h1>
+
+  <h3 class="mb-4">Next trips</h3>
+
+  <div class="row">
+    <% if @next_bookings.empty? || @next_bookings.nil? %>
+      <div class="col-6">
+        <%= link_to root_path, class:"new-booking" do %>
+          <p>No booking to show...</p>
+          <p class="my-btn prim">Start to explore!</p>
+        <% end %>
+      </div>
+    <% end %>
+
+    <% @next_bookings.each do |booking| %>
+      <div class="col-6">
+        <div class="booking-card">
+          <%= link_to villa_path(booking.villa) do %>
+            <%= cl_image_tag booking.villa.photo.key, class:"booking-pic" %>
+          <% end %>
+
+          <div class="booking-info">
+            <p><strong><%= booking.villa.name %></strong></p>
+
+            <div class="booking-address">
+              <i class="fa-solid fa-location-dot"></i>
+              <p><%= booking.villa.address %></p>
+            </div>
+
+            <p><%= booking.start_date %> to <%= booking.end_date %></p>
+
+            <%= link_to booking_path(booking),class:"delete-btn", data: {turbo_method: :delete, turbo_confirm: "Are you want to cancel this booking?"} do %>
+              <i class="fa-solid fa-trash"></i>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+
+  <h3 class="mb-4">Past trips</h3>
+
+  <div class="row">
+
+    <% if @past_bookings.empty? || @past_bookings.nil? %>
+      <div class="col-6">
+        <%= link_to root_path, class:"new-booking" do %>
+          <p>No booking to show...</p>
+          <p class="my-btn prim">Start to explore!</p>
+        <% end %>
+      </div>
+    <% end %>
+
+    <% @past_bookings.each do |booking| %>
+      <div class="col-6">
+        <div class="booking-card">
+          <%= link_to villa_path(booking.villa) do %>
+            <%= cl_image_tag booking.villa.photo.key, class:"booking-pic" %>
+          <% end %>
+
+          <div class="booking-info">
+            <p><strong><%= booking.villa.name %></strong></p>
+
+            <div class="booking-address">
+              <i class="fa-solid fa-location-dot"></i>
+              <p><%= booking.villa.address %></p>
+            </div>
+
+            <p><%= booking.start_date %> to <%= booking.end_date %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
