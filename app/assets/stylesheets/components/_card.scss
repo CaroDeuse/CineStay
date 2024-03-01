@@ -6,6 +6,8 @@
   border-radius: 20px;
   margin-bottom: 30px;
   background-color: $cinedarkblue2;
+  height: 420px;
+  position: relative;
   // box-shadow: 3px 5px 10px rgba($color: $black, $alpha: 0.7);
 }
 
@@ -73,4 +75,27 @@
 
 .new-villa:hover {
   background-color: $cinetransparentpink;
+}
+
+.tags {
+  display: flex;
+  position: absolute;
+  bottom: 7px;
+  right: 9px;
+
+}
+
+.movie {
+  background-color: $grey1;
+  color: $cinedarkblue2;
+  border-radius: 100px;
+  padding: 0px 8px;
+  margin-right: 10px;
+}
+
+.genre {
+  background-color: $white;
+  color: $cinedarkblue2;
+  border-radius: 100px;
+  padding: 0px 8px;
 }

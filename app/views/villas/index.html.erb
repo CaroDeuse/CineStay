@@ -19,6 +19,13 @@
         <div class="col-4 col-lg-4">
           <%= link_to villa_path(villa), class:"card-link" do %>
             <div class="villa-card">
+
+              <div class="tags">
+                <p class="movie"><%= villa.inspired_by%></p>
+                <p class="genre"><%= villa.movie_genre %></p>
+              </div>
+              <%# add also in my villas %>
+
               <% if villa.photo.attached? %>
                 <%= cl_image_tag villa.photo.key, height: 300, class:"villa-pic" %>
               <% end %>
@@ -26,7 +33,6 @@
               <div class="general-info">
                 <h3><%= villa.name %></h3>
                 <p><%= villa.address %></p>
-                <p><%= villa.movie_genre %> | Inspired by <%= villa.inspired_by%></p>
 
                 <div class="guest-price">
                   <i class="fa-solid fa-people-group"></i>
