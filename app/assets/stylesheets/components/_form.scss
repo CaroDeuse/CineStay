@@ -11,6 +11,13 @@
   border: 1px solid $grey3;
   padding: 20px;
   border-radius: 20px;
+  position: relative;
+}
+// we may want to apply to to all forms and not just booking
+
+.my-form a {
+  position: absolute;
+  bottom: -65px;
 
   .my-btn.prim {
     margin-bottom: 0px;

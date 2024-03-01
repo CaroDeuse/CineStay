@@ -18,13 +18,13 @@
   margin-bottom: 20px;
 }
 
-.villa-pics {
-  height: 475px;
-  background-color: $cinetransparentpink;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-}
+// .villa-pics {
+//   // height: 475px;
+//   // background-color: $cinetransparentpink;
+//   // display: flex;
+//   // justify-content: center;
+//   margin-bottom: 50px;
+// }
 
 .villa-pics img {
   max-height: 100%;
@@ -60,4 +60,8 @@ a.mapboxgl-ctrl-logo {
 
 .mapboxgl-ctrl-bottom-right {
   display: none;
+}
+
+.inspired {
+  display: flex;
 }

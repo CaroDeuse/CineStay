@@ -5,7 +5,6 @@
     data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 </div>
-<%# to be replaced with real map %>
 
 
 <div class="container">
@@ -14,6 +13,11 @@
     <div class="col-8">
       <div class="villa-box">
         <h1 class="top-title"><%= @villa.name %></h1>
+
+        <div class="inspired">
+          <p class="movie"><%= @villa.inspired_by%></p>
+          <p class="genre"><%= @villa.movie_genre %></p>
+        </div>
 
         <div class="villa-infos">
           <i class="fa-solid fa-people-group"></i>
@@ -24,12 +28,15 @@
           <p><%= @villa.address %></p>
         </div>
 
+        <p>Hosted by: <%= @villa.user.firstname %> <%= @villa.user.lastname %></p>
+
+
+
         <p><%= @villa.description %></p>
 
         <div class="villa-pics">
           <%= cl_image_tag @villa.photo.key %>
         </div>
-
         <%= link_to "Back to explore", root_path, class:"my-btn sec" %>
       </div>
     </div>
@@ -68,13 +75,12 @@
 
           <%= f.submit "Book", class: "my-btn prim" %>
         <% end %>
-
+        <%= link_to "Back to explore", root_path, class:"my-btn sec" %>
       </div>
+
     </div>
 
   </div>
-
-
 
 
 </div>

@@ -2,6 +2,14 @@ h1, h2, h3, h4, h5, p, label, a, .nav-link, .form-control, .form-control:focus, 
   color: $grey1;
 }
 
+input[name="villa[inspired_by]"]::placeholder {
+  color: $grey1;
+}
+
+input[name="query"]::placeholder {
+  color: $grey1;
+}
+
 option {
   color: $grey5;
 }
