@@ -23,7 +23,7 @@
 
           <li class="nav-item dropdown">
           <a href="#" class="my-btn prim" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Menu<i class="fa-solid fa-bars"></i>
+            <%= current_user.firstname %> <%= current_user.lastname %><i class="fa-solid fa-bars"></i>
           </a>
           <%# we could replace this with an avatar of the user connected (if we ask for one at login!) %>
 
