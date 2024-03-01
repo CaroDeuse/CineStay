@@ -1,6 +1,6 @@
 import { Controller } from "@hotwired/stimulus"
 
-// Connects to data-controller="booking-cost"
+
 export default class extends Controller {
   static targets = ["nightsNumber", "totalPrice"]
 
@@ -17,5 +17,4 @@ export default class extends Controller {
 
 
   }
-
 }
