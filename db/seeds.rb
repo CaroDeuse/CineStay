@@ -38,34 +38,34 @@ puts "DB cleaned"
 # villa.save!
 
 
-puts "Creating villas 1 - 5 ..."
+puts "... creating villas 1 - 5 ..."
 
 user = User.new(email: "martin@yopmail.com", password: "123456", firstname: "Martin", lastname: "Scorsese")
 
 # Villa 1 - Inspired by "The Lord of the Ring"
 file = URI.open("https://miro.medium.com/v2/resize:fit:1400/format:webp/0*Ln0064ci-IQNC7f8")
-villa = Villa.new(name: "The Shire Retreat", address: "1 Bagshot Row, Hobbiton, New Zealand", movie_genre: "Fantasy", description: "Nestled in the heart of a lush, green landscape, this cozy Hobbit hole offers a blend of rustic charm and modern comforts, perfect for fans looking to live like a Hobbit.", price_per_night: 220, guests_number: 4, inspired_by: "The Lord of the Ring")
+villa = Villa.new(name: "The Shire Retreat", address: "Matamata 3472, New Zealand", movie_genre: "Fantasy", description: "Nestled in the heart of a lush, green landscape, this cozy Hobbit hole offers a blend of rustic charm and modern comforts, perfect for fans looking to live like a Hobbit.", price_per_night: 220, guests_number: 4, inspired_by: "The Lord of the Ring")
 villa.photo.attach(io: file, filename: "shire.jpg", content_type: "image/jpg")
 villa.user = user
 villa.save!
 
 # Villa 2 - Inspired by "Iron Man"
 file = URI.open("https://cdna.artstation.com/p/assets/images/images/009/981/268/large/phil-saunders-calalautner-houseweb.jpg")
-villa = Villa.new(name: "Stark Modernism", address: "10880 Malibu Point, Malibu, CA, USA", movie_genre: "Action", description: "A sleek, state-of-the-art villa perched on a cliffside, offering panoramic ocean views and equipped with the latest technology.", price_per_night: 450, guests_number: 6, inspired_by: "Iron Man")
+villa = Villa.new(name: "Stark Modernism", address: "23314 Malibu Colony Rd, Malibu, CA 90265, USA", movie_genre: "Action", description: "A sleek, state-of-the-art villa perched on a cliffside, offering panoramic ocean views and equipped with the latest technology.", price_per_night: 450, guests_number: 6, inspired_by: "Iron Man")
 villa.photo.attach(io: file, filename: "stark.jpg", content_type: "image/jpg")
 villa.user = user
 villa.save!
 
 # Villa 3 - Inspired by "Jaws"
 file = URI.open("https://media.cnn.com/api/v1/images/stellar/prod/130816101217-jaws.jpg")
-villa = Villa.new(name: "Amity Island Cottage", address: "12 Brody Lane, Martha's Vineyard, MA, USA", movie_genre: "Thriller", description: "A charming seaside cottage with direct beach access, perfect for those who love the ocean's beauty and don't mind its mysteries.", price_per_night: 320, guests_number: 5, inspired_by: "Jaws")
+villa = Villa.new(name: "Amity Island Cottage", address: "Flatts Village, Hamilton, Bermudes", movie_genre: "Thriller", description: "A charming seaside cottage with direct beach access, perfect for those who love the ocean's beauty and don't mind its mysteries.", price_per_night: 320, guests_number: 5, inspired_by: "Jaws")
 villa.photo.attach(io: file, filename: "jaws.jpg", content_type: "image/jpg")
 villa.user = user
 villa.save!
 
 # Villa 4 - Inspired by "Avatar"
 file = URI.open("https://images-prod.dazeddigital.com/1362/azure/dazed-prod/1330/5/1335508.jpeg")
-villa = Villa.new(name: "Pandoran Paradise", address: "Hallelujah Mountains, Zhangjiajie, Hunan, China", movie_genre: "Sci-Fi", description: "An eco-friendly villa nestled in a lush, alien forest with stunning flora and immersive virtual reality experiences of Pandora.", price_per_night: 380, guests_number: 4, inspired_by: "Avatar")
+villa = Villa.new(name: "Pandoran Paradise", address: "Monduli Juu Ward, Arusha, Tanzanie", movie_genre: "Sci-Fi", description: "An eco-friendly villa nestled in a lush, alien forest with stunning flora and immersive virtual reality experiences of Pandora.", price_per_night: 380, guests_number: 4, inspired_by: "Avatar")
 villa.photo.attach(io: file, filename: "avatar.jpg", content_type: "image/jpg")
 villa.user = user
 villa.save!
@@ -88,7 +88,7 @@ villa.save!
 
 # Villa 7 - Inspired by "Jurassic Park"
 file = URI.open("https://i.ibb.co/xhJF3Dz/21.jpg")
-villa = Villa.new(name: "Jurassic Jungle Lodge", address: "Isla Nublar, Costa Rica", movie_genre: "Adventure", description: "A thrilling escape located in a lush, prehistoric jungle with guided tours and dinosaur sightings.", price_per_night: 340, guests_number: 6, inspired_by: "Jurassic Park")
+villa = Villa.new(name: "Jurassic Jungle Lodge", address: "Pitahaya, Puntarenas, Puntarenas, Costa Rica", movie_genre: "Adventure", description: "A thrilling escape located in a lush, prehistoric jungle with guided tours and dinosaur sightings.", price_per_night: 340, guests_number: 6, inspired_by: "Jurassic Park")
 villa.photo.attach(io: file, filename: "jurassic.jpg", content_type: "image/jpg")
 villa.user = user
 villa.save!
@@ -97,7 +97,7 @@ user = User.new(email: "quentin@yopmail.com", password: "123456", firstname: "Qu
 
 # Villa 8 - Inspired by "Interstellar"
 file = URI.open("https://static.wikia.nocookie.net/concord/images/f/fb/Interstellar_spaceship.jpg")
-villa = Villa.new(name: "Cosmic Horizon Retreat", address: "International Space Station, Low Earth Orbit", movie_genre: "Sci-Fi", description: "Embark on a journey beyond the stars at this interstellar villa, offering unparalleled views of distant galaxies and celestial phenomena.", price_per_night: 1000, guests_number: 2, inspired_by: "Interstellar")
+villa = Villa.new(name: "Cosmic Horizon Retreat", address: "Space Needle, 400 Broad St, Seattle, Washington 98109, USA", movie_genre: "Sci-Fi", description: "Embark on a journey beyond the stars at this interstellar villa, offering unparalleled views of distant galaxies and celestial phenomena.", price_per_night: 1000, guests_number: 2, inspired_by: "Interstellar")
 villa.photo.attach(io: file, filename: "interstellar.jpg", content_type: "image/jpg")
 villa.user = user
 villa.save!
@@ -111,7 +111,7 @@ villa.save!
 
 # Villa 10 - Inspired by "Ninja Assassin"
 file = URI.open("https://www.peteryee.my/graphics/inspiringwell/largeorph.jpg")
-villa = Villa.new(name: "Ninja Dojo Retreat", address: "1 Chome-1-1 Yokoami, Sumida City, Tokyo, Japan", movie_genre: "Action", description: "A traditional Japanese dojo turned into a serene retreat, offering martial arts training and Zen gardens for meditation.", price_per_night: 220, guests_number: 6, inspired_by: "Ninja Assassin")
+villa = Villa.new(name: "Ninja Dojo Retreat", address: "Kumamoto, préfecture de Kumamoto, Japon", movie_genre: "Action", description: "A traditional Japanese dojo turned into a serene retreat, offering martial arts training and Zen gardens for meditation.", price_per_night: 220, guests_number: 6, inspired_by: "Ninja Assassin")
 villa.photo.attach(io: file, filename: "ninja.jpg", content_type: "image/jpg")
 villa.user = user
 villa.save!
@@ -120,14 +120,14 @@ puts "... creating villas 11 - 17. Bear with us, almost done!"
 
 # Villa 11 - Inspired by "The Good, The Bad and The Ugly"
 file = URI.open("https://hips.hearstapps.com/clv.h-cdn.co/assets/17/14/2048x1152/hd-aspect-1491511467-mane-street-2.jpg")
-villa = Villa.new(name: "Wild West Ranch", address: "1 Old West Town, Tombstone, AZ, USA", movie_genre: "Western", description: "Step back in time with this authentic ranch experience, complete with horseback riding and cowboy cookouts.", price_per_night: 180, guests_number: 8, inspired_by: "The Good, The Bad and The Ugly")
+villa = Villa.new(name: "Wild West Ranch", address: "326 E Allen St, Tombstone, AZ 85638, USA", movie_genre: "Western", description: "Step back in time with this authentic ranch experience, complete with horseback riding and cowboy cookouts.", price_per_night: 180, guests_number: 8, inspired_by: "The Good, The Bad and The Ugly")
 villa.photo.attach(io: file, filename: "shire.jpg", content_type: "image/jpg")
 villa.user = user
 villa.save!
 
 # Villa 12 - Inspired by "Star Wars"
 file = URI.open("https://i2-prod.mirror.co.uk/incoming/article6681133.ece/ALTERNATES/s1200d/PAY-Millenium-Falcon-mansion.jpg")
-villa = Villa.new(name: "Millenium Falcon Mansion", address: "Space Launch Complex 40, Cape Canaveral, FL, USA", movie_genre: "Sci-Fi", description: "A futuristic villa offering a gateway to the stars, with virtual space tours and zero-gravity simulators.", price_per_night: 500, guests_number: 4, inspired_by: "Star Wars")
+villa = Villa.new(name: "Millenium Falcon Mansion", address: "2204 S Washington Ave, Titusville, FL 32780, USA", movie_genre: "Sci-Fi", description: "A futuristic villa offering a gateway to the stars, with virtual space tours and zero-gravity simulators.", price_per_night: 500, guests_number: 4, inspired_by: "Star Wars")
 villa.photo.attach(io: file, filename: "star_wars.jpg", content_type: "image/jpg")
 villa.user = user
 villa.save!
@@ -136,14 +136,14 @@ user = User.new(email: "sofia@yopmail.com", password: "123456", firstname: "Sofi
 
 # Villa 13 - Inspired by "Indiana Jones"
 file = URI.open("https://cdn.zavant.ai/images/62898f19-ab09-4790-8f75-26741756d966.png")
-villa = Villa.new(name: "Mystic Mountain Lodge", address: "Mount Everest Base Camp, Solukhumbu, Nepal", movie_genre: "Adventure", description: "A lodge offering breathtaking views and a touch of mysticism at the base of the world's highest peak.", price_per_night: 250, guests_number: 10, inspired_by: "Indiana Jones")
+villa = Villa.new(name: "Mystic Mountain Lodge", address: "Khumjung 56000, Nepal", movie_genre: "Adventure", description: "A lodge offering breathtaking views and a touch of mysticism at the base of the world's highest peak.", price_per_night: 250, guests_number: 10, inspired_by: "Indiana Jones")
 villa.photo.attach(io: file, filename: "indiana.png", content_type: "image/png")
 villa.user = user
 villa.save!
 
 # Villa 14 - Inspired by "Finding Nemo"
 file = URI.open("https://images.squarespace-cdn.com/content/v1/51cdafc4e4b09eb676a64e68/1470759792620-0KBUSY0X9VL6MYKUG21U/nemo11a.jpg")
-villa = Villa.new(name: "Oceanic Oasis", address: "Great Barrier Reef, Queensland, Australia", movie_genre: "Animation", description: "A floating villa on the crystal-clear waters of the Great Barrier Reef, offering snorkeling and underwater adventures.", price_per_night: 430, guests_number: 4, inspired_by: "Finding Nemo")
+villa = Villa.new(name: "Oceanic Oasis", address: "Barrier Reef Drive, Mermaid Waters Queensland 4218, Australie", movie_genre: "Animation", description: "A floating villa on the crystal-clear waters of the Great Barrier Reef, offering snorkeling and underwater adventures.", price_per_night: 430, guests_number: 4, inspired_by: "Finding Nemo")
 villa.photo.attach(io: file, filename: "nemo.jpg", content_type: "image/jpg")
 villa.user = user
 villa.save!

@@ -1,0 +1,11 @@
+<div class="info_window">
+  <div class="popup-photo">
+    <% if villa.photo.attached? %>
+      <%= cl_image_tag villa.photo.key, height: 100, class:"villa-pic" %>
+    <% end %>
+  </div>
+  <div class="popup-show-info">
+    <h2><%= villa.name %></h2>
+    <p><%= villa.address %></p>
+  </div>
+</div>
