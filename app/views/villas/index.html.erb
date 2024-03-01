@@ -1,24 +1,39 @@
 <div class="full-screen-container">
   <div class="container">
-    <h1 class="top-title">Explore the movie-themed Villas...</h1>
+    <h1 class="top-title">Explore movie-themed Villas...</h1>
 
     <%# SEARCH BAR %>
     <div class="row">
       <div class="col-sm-8 my-3">
-        <%= form_with url: root_path, method: :get, class: "d-flex" do %>
-          <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Type a movie genre or a popular movie" %>
-          <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+        <%= form_with url: root_path, method: :get, class: "d-flex mb-5" do %>
+          <%= text_field_tag :query,
+                params[:query],
+                class: "form-control search-field",
+                placeholder: "Movie genre, popular movie ..."
+            %>
+          <button type="submit" name="" class="my-btn sec">Search <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
         <% end %>
+        <p class="text-white"><%= @villas.count %> results</p>
       </div>
     </div>
+
+    <%# Results %>
+
 
     <%# ALL VILLAS CARDS %>
     <%# REFACTO most of this code is the same than my_villas %>
     <div class="row">
       <% @villas.each do |villa| %>
         <div class="col-4 col-lg-4">
-          <%= link_to villa_path(villa) do %>
+          <%= link_to villa_path(villa), class:"card-link" do %>
             <div class="villa-card">
+
+              <div class="tags">
+                <p class="movie"><%= villa.inspired_by%></p>
+                <p class="genre"><%= villa.movie_genre %></p>
+              </div>
+
               <% if villa.photo.attached? %>
                 <%= cl_image_tag villa.photo.key, height: 300, class:"villa-pic" %>
               <% end %>
@@ -26,7 +41,6 @@
               <div class="general-info">
                 <h3><%= villa.name %></h3>
                 <p><%= villa.address %></p>
-                <p><%= villa.movie_genre %> | Inspired by <%= villa.inspired_by%></p>
 
                 <div class="guest-price">
                   <i class="fa-solid fa-people-group"></i>
