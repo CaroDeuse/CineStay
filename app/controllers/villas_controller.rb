@@ -12,7 +12,8 @@ class VillasController < ApplicationController
     @markers = @villas.geocoded.map do |villa|
       {
         lat: villa.latitude,
-        lng: villa.longitude
+        lng: villa.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: { villa: villa })
       }
     end
   end
