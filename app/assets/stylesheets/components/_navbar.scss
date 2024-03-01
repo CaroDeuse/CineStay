@@ -4,7 +4,26 @@
   position: sticky;
   top: 0;
   z-index: 2;
+  height: 75px;
 }
+
+.navbar-size {
+  height: 90%;
+}
+
+.logo-size {
+  height: 100%;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 55px;
+  // box-shadow: 0 0 5px rgba($color: $white, $alpha: 0.5);
+  // TO-DO: the shadow of the image. because it's a png, maybe add a shadow manuelly on powerpoint
+}
+
+// .navbar-lewagon p {
+  // text-shadow: 0 0 5px rgba($color: $white, $alpha: 0.5);
+// }
 
 .navbar-lewagon .dropdown {
   margin-top: 8px;
@@ -21,7 +40,7 @@
   font-family: "Orbitron", sans-serif;
   color: $cinepink;
   margin: 0px;
-  font-size: 24px;
+  font-size: 30px;
 }
 
 .nav-link:hover {
@@ -49,14 +68,4 @@
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
-  box-shadow: 0 0 5px rgba($color: $white, $alpha: 0.5);
-  // TO-DO: the shadow of the image. because it's a png, maybe add a shadow manuelly on powerpoint
-}
-
-.navbar-lewagon p {
-  text-shadow: 0 0 5px rgba($color: $white, $alpha: 0.5);
 }

@@ -15,8 +15,11 @@
   border-radius: 20px;
   margin-bottom: 30px;
   background-color: $cinedarkblue2;
-  height: 440px;
+  height: 464px;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   // box-shadow: 3px 5px 10px rgba($color: $black, $alpha: 0.7);
 }
 // need to refactor because above 2 are almsot the same!
@@ -45,6 +48,7 @@
 
 .general-info {
   padding: 20px;
+  flex-grow: 1;
 }
 
 .guest-price {
