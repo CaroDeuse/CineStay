@@ -19,3 +19,7 @@ body {
               linear-gradient(336deg, $cinepink, $cinedarkblue1 75%);
   background-attachment: fixed;
 }
+
+input::placeholder {
+  color: $grey1;
+}

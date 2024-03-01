@@ -11,5 +11,23 @@
   border: 1px solid $grey3;
   padding: 20px;
   border-radius: 20px;
+
+  .my-btn.prim {
+    margin-bottom: 0px;
+  }
 }
 // we may want to apply to to all forms and not just booking
+
+.my-form hr {
+  color: $grey1;
+  opacity: 0.75;
+  margin-top: 0px;
+}
+
+.start-date {
+  margin-right: 5px;
+}
+
+.end-date {
+  margin-left: 5px;
+}
