@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 
 export default class extends Controller {
-  static targets = ["nightsNumber", "totalPrice", "startDate"]
+  static targets = ["nightsNumber", "totalPrice", "startDate", "endDate"]
 
   connect() {
     console.log("Hey I'm trying to do some JS")
@@ -11,11 +11,20 @@ export default class extends Controller {
   updateFields(event) {
 
 
-    console.log(this.startDateTarget);
-    this.nightsNumberTarget.innerText = "Bingo!";
-    this.totalPriceTarget.innerText = "re-Bingo!";
-    // how do i update this text? do i need values?
+    console.log("start date");
+    console.log(Date(this.startDateTarget.value));
+    console.log(typeof Date(this.startDateTarget.value));
+    console.log("end date");
+    console.log(Date(this.endDateTarget.value));
 
+    const startDate = new Date(this.startDateTarget.value)
+    const endDate = new Date(this.endDateTarget.value)
+
+
+
+    this.nightsNumberTarget.innerText = endDate - startDate;
+    // this.nightsNumberTarget.innerText = Date(this.endDateTarget.value) - Date(this.startDateTarget.value);
+    this.totalPriceTarget.innerText = 6 - 4;
 
   }
 }
