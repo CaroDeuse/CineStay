@@ -52,7 +52,7 @@ class VillasController < ApplicationController
     @villa = Villa.find(params[:id])
     @villa.update(villa_params)
     if @villa.save
-      redirect_to villa_path(@villa), notice: "Your changes have successfully been saved. See be yourself!"
+      redirect_to villa_path(@villa), notice: "Your changes have successfully been saved. See by yourself!"
     else
       render :edit, status: :unprocessable_entity
     end
