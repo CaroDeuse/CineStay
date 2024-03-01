@@ -13,7 +13,30 @@ require "open-uri"
 puts "Cleaning DB ..."
 Villa.destroy_all
 User.destroy_all
+Booking.destroy_all
 puts "DB cleaned"
+
+
+# user = User.new(email: "Edgar@yopmail.com", password: "123456", firstname: "Edgar", lastname: "Grospiron")
+
+# file = URI.open("https://image.tmdb.org/t/p/original/qJ2tW6WMUDux911r6m7haRef0WH.jpg")
+# villa = Villa.new(name: "Gotham Loft", address: "1007 Mountain Drive, Gotham City, USA", movie_genre: "Action", description: "Located in the heart of the city, this luxurious penthouse offers an urban retreat with dark, elegant interiors and a rooftop terrace overlooking Gotham.", price_per_night: 230, guests_number: 12)
+# villa.photo.attach(io: file, filename: "Gotham.jpg", content_type: "image/jpg")
+# villa.user = user
+# villa.save!
+
+# file = URI.open("https://miro.medium.com/v2/resize:fit:1400/format:webp/0*Ln0064ci-IQNC7f8")
+# villa = Villa.new(name: "The Shire Retreat", address: "1 Bagshot Row, Hobbiton, Middle-earth", movie_genre: "Fantasy", description: "Nestled in the heart of a lush, green landscape, this cozy Hobbit hole offers a blend of rustic charm and modern comforts. Features include circular doors, a vegetable garden, and breathtaking countryside views.", price_per_night: 50, guests_number: 20)
+# villa.photo.attach(io: file, filename: "shire.jpg", content_type: "image/jpg")
+# villa.user = user
+# villa.save!
+
+# file = URI.open("https://images-prod.dazeddigital.com/1362/azure/dazed-prod/1330/5/1335508.jpeg")
+# villa = Villa.new(name: "Pandoran Paradise", address: "Unit 5, Hallelujah Mountains, Pandora", movie_genre: "Sci-Fi", description: "An eco-friendly villa nestled in a lush, alien forest. Features bioluminescent lighting, stunning flora, and immersive virtual reality experiences of Pandora.", price_per_night: 500, guests_number: 3)
+# villa.photo.attach(io: file, filename: "pandora.jpg", content_type: "image/jpg")
+# villa.user = user
+# villa.save!
+
 
 puts "Creating villas 1 - 5 ..."
 
@@ -93,7 +116,7 @@ villa.photo.attach(io: file, filename: "ninja.jpg", content_type: "image/jpg")
 villa.user = user
 villa.save!
 
-puts "... creating villas 11 - 17. Bear with us, almost done !"
+puts "... creating villas 11 - 17. Bear with us, almost done!"
 
 # Villa 11 - Inspired by "The Good, The Bad and The Ugly"
 file = URI.open("https://hips.hearstapps.com/clv.h-cdn.co/assets/17/14/2048x1152/hd-aspect-1491511467-mane-street-2.jpg")
@@ -146,4 +169,21 @@ villa.photo.attach(io: file, filename: "kings_landing.jpg", content_type: "image
 villa.user = user
 villa.save!
 
-puts "17 villas and 3 owners created!"
+puts "... creating a few bookings. This is the last step!"
+
+booking = Booking.new(start_date: "2023-12-24", end_date: "2024-01-02")
+booking.villa = Villa.find_by(name: "Hogwarts Tower Suite")
+booking.user = user
+booking.save!(validate: false)
+
+booking = Booking.new(start_date: "2023-08-14", end_date: "2024-08-28")
+booking.villa = Villa.find_by(name: "Amity Island Cottage")
+booking.user = user
+booking.save!(validate: false)
+
+booking = Booking.new(start_date: "2024-07-01", end_date: "2024-07-08")
+booking.villa = Villa.find_by(name: "Jurassic Jungle Lodge")
+booking.user = user
+booking.save!(validate: false)
+
+puts "17 villas, 3 owners created, and 3 bookings created!"

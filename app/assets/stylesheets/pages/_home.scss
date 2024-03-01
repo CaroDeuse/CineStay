@@ -1,1 +1,13 @@
 // Specific CSS for your home-page
+.full-screen-container {
+  display: flex;
+}
+
+.map-box-all-villas {
+  height: 80vh;
+  position: sticky;
+  top: 70px;
+  margin: 50px;
+  border-radius: 20px;
+  box-shadow: 3px 5px 10px rgba($color: $black, $alpha: 0.7);
+}
