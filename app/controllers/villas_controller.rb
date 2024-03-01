@@ -3,11 +3,30 @@ class VillasController < ApplicationController
 
   def index
     @villas = Villa.all
+
+    if params[:query].present?
+      sql_subquery = "name ILIKE :query OR description ILIKE :query OR movie_genre ILIKE :query OR inspired_by ILIKE :query"
+      @villas = @villas.where(sql_subquery, query: "%#{params[:query]}%")
+    end
+
+    @markers = @villas.geocoded.map do |villa|
+      {
+        lat: villa.latitude,
+        lng: villa.longitude
+      }
+    end
   end
 
   def show
     @villa = Villa.find(params[:id])
     @booking = Booking.new
+
+    @markers = [
+      {
+        lat: @villa.latitude,
+        lng: @villa.longitude
+      }
+    ]
   end
 
   def new
@@ -51,6 +70,6 @@ class VillasController < ApplicationController
   private
 
   def villa_params
-    params.require(:villa).permit(:name, :address, :movie_genre, :description, :price_per_night, :guests_number, :photo)
+    params.require(:villa).permit(:name, :address, :movie_genre, :description, :price_per_night, :guests_number, :inspired_by, :photo)
   end
 end
