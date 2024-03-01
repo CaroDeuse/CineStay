@@ -11,10 +11,15 @@
                 class: "form-control search-field",
                 placeholder: "Movie genre, popular movie ..."
             %>
-          <%= submit_tag "Search", name: "", class: "my-btn sec" %>
+          <button type="submit" name="" class="my-btn sec">Search <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
         <% end %>
+        <p class="text-white"><%= @villas.count %> results</p>
       </div>
     </div>
+
+    <%# Results %>
+
 
     <%# ALL VILLAS CARDS %>
     <%# REFACTO most of this code is the same than my_villas %>
