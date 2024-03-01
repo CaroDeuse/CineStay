@@ -14,7 +14,10 @@
           <button type="submit" name="" class="my-btn sec">Search <i class="fa-solid fa-magnifying-glass"></i>
           </button>
         <% end %>
-        <p class="text-white"><%= @villas.count %> results</p>
+        <% if params[:query].present? %>
+          <span class="text-white position"><%= @villas.count %> results. <%= link_to "Reset", root_path %></span>
+        <% end %>
+
       </div>
     </div>
 
