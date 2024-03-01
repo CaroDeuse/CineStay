@@ -24,7 +24,6 @@
                 <p class="movie"><%= villa.inspired_by%></p>
                 <p class="genre"><%= villa.movie_genre %></p>
               </div>
-              <%# add also in my villas %>
 
               <% if villa.photo.attached? %>
                 <%= cl_image_tag villa.photo.key, height: 300, class:"villa-pic" %>
