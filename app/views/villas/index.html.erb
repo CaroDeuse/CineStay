@@ -17,7 +17,7 @@
     <div class="row">
       <% @villas.each do |villa| %>
         <div class="col-4 col-lg-4">
-          <%= link_to villa_path(villa) do %>
+          <%= link_to villa_path(villa), class:"card-link" do %>
             <div class="villa-card">
               <% if villa.photo.attached? %>
                 <%= cl_image_tag villa.photo.key, height: 300, class:"villa-pic" %>

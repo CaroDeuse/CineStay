@@ -1,8 +1,12 @@
+.card-link {
+  text-decoration: none;
+}
+
 .villa-card {
   border-radius: 20px;
   margin-bottom: 30px;
   background-color: $cinedarkblue2;
-  box-shadow: 3px 5px 10px rgba($color: $black, $alpha: 0.7);
+  // box-shadow: 3px 5px 10px rgba($color: $black, $alpha: 0.7);
 }
 
 .villa-card:hover {
@@ -25,7 +29,6 @@
 .guest-price {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
 }
 
 .guest-price i {
