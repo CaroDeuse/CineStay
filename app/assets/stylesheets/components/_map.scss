@@ -1,14 +1,42 @@
 .mapboxgl-popup {
   max-width: 200px;
+  max-height: 150px;
 }
 
 .mapboxgl-popup-content {
-  padding: none;
+  padding: none !important;
   text-align: center;
   font-family: "Open Sans", sans-serif;
+  background-color: $cinedarkblue1;
+  box-shadow: 0 0 10px rgba($color: $white, $alpha: 0.7);
+}
+
+.villa-pic {
+  box-shadow: 0 0 10px rgba($color: $black, $alpha: 0.7);
 }
 
 .info-window {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+}
+
+.popup-photo {
+  width: 100%;
+}
+
+.popup-show-info {
+  width: 100%;
+  text-align: center;
+  a {
+    text-decoration: none;
+    color: $white;
+  }
+}
+
+.popup-show-info {
+  margin-bottom: 0;
+}
+
+.mapboxgl-popup-close-button {
+  color: $white;
 }

@@ -4,11 +4,15 @@
 }
 
 .map-box-all-villas {
-  margin-top: 177px !important;
-  height: 60vh;
+  margin-top: 276px !important;
+  height: 65vh;
   position: sticky;
   top: 75px;
   margin: 50px;
   border-radius: 20px;
   box-shadow: 3px 5px 10px rgba($color: $black, $alpha: 0.7);
+}
+
+.mapboxgl-marker path {
+  fill: $cinepink;
 }
