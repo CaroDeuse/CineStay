@@ -71,3 +71,22 @@
 .new-villa:hover {
   background-color: $cinetransparentpink;
 }
+
+
+
+
+// this may cause conflicts as I added the below in 2 different routes
+.movie {
+  background-color: $grey1;
+  color: $cinedarkblue2;
+  border-radius: 100px;
+  padding: 0px 8px;
+  margin-right: 10px;
+}
+
+.genre {
+  background-color: $white;
+  color: $cinedarkblue2;
+  border-radius: 100px;
+  padding: 0px 8px;
+}
