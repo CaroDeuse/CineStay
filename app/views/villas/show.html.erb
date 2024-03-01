@@ -40,24 +40,26 @@
             <%= f.input :start_date, as: :string, wrapper_html: { class:"start-date" },
             input_html: { data: { controller: "datepicker", booking_cost_target: "startDate" } } %>
             <%= f.input :end_date, as: :string, wrapper_html: { class:"end-date" },
-            input_html: { data: { controller: "datepicker", booking_cost_target: "endDate", action: "click->booking-cost#updateFields" } }%>
+            input_html: { data: { controller: "datepicker", booking_cost_target: "endDate", action: "blur->booking-cost#updateFields" } }%>
           </div>
 
           <div class="d-flex justify-content-between mt-4">
             <p>Price per night:</p>
-            <p><strong><%= @villa.price_per_night %>€</strong></p>
+            <p data-booking-cost-target="price" class="flex-grow-1 text-end"><%= @villa.price_per_night %></p>
+            <p> €</p>
           </div>
 
           <div class="d-flex justify-content-between">
             <p>Number of nights:</p>
-            <p data-booking-cost-target="nightsNumber"><strong>???</strong></p>
+            <p data-booking-cost-target="nightsNumber"></p>
           </div>
 
           <hr>
 
           <div class="d-flex justify-content-between mb-3">
-            <p><strong>Total price:</strong></p>
-            <p data-booking-cost-target="totalPrice" ><strong>!!!</strong></p>
+            <p>Total price:</p>
+            <p data-booking-cost-target="totalPrice" class="flex-grow-1 text-end"></p>
+            <p> €</p>
           </div>
 
           <%= f.submit "Book", class: "my-btn prim" %>
