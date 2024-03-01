@@ -34,11 +34,9 @@
     <div class="col-4">
       <div class="my-form booking" data-controller="booking-cost" >
         <h3 class="mb-4">Book this villa</h1>
-        <%= simple_form_for [@villa, @booking] do |f| %>
-          <%= f.input :start_date %>
-          <%= f.input :end_date %>
-
-          <div data-action="click->booking-cost#updateFields">where the hell do i put that?on the fields?</div>
+        <%= simple_form_for [@villa, @booking]  do |f| %>
+          <%= f.input :start_date, data: {booking_cost_target: "startDate"} %>
+          <%= f.input :end_date, input_html: { data: { action: "click->booking-cost#updateFields" } }%>
 
           <div class="d-flex justify-content-between mt-5">
             <p>Price per night:</p>
